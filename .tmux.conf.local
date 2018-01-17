@@ -308,3 +308,6 @@ bind r \
     display 'Reloading tmux config...' \;\
     source-file ~/.tmux.conf \;\
     display 'Reloaded tmux config.'
+
+set -g pane-border-status top
+set -g pane-border-format "#{pane_index} - #{pane_current_command}"
