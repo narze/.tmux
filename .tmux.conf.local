@@ -311,3 +311,7 @@ bind r \
 
 set -g pane-border-status top
 set -g pane-border-format "#{pane_index} - #{pane_current_command}"
+
+# Plugins
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
