@@ -302,13 +302,6 @@ bind C-b last-window
 # move status line to top
 #set -g status-position top
 
-# force a reload of the config file
-unbind r
-bind r \
-    display 'Reloading tmux config...' \;\
-    source-file ~/.tmux.conf \;\
-    display 'Reloaded tmux config.'
-
 set -g pane-border-status top
 set -g pane-border-format "#{pane_index} - #{pane_current_command}"
 
@@ -326,9 +319,12 @@ set -g @tpm_plugins '          \
 # Initialize TMUX plugin manager
 run -b '~/.tmux/plugins/tpm/tpm'
 
+# My Bindings
 bind -n C-h select-pane -L
 bind -n C-i select-pane -R
 bind -n C-n select-pane -t +1
 bind -n C-y select-window -t +1
 bind -n C-u select-window -t -1
-unbind -n tab
+
+# My Unbindings
+unbind -n Tab # This works only if placed after binds, dunno why
