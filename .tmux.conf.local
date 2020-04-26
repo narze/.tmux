@@ -320,11 +320,7 @@ set -g @tpm_plugins '          \
 run -b '~/.tmux/plugins/tpm/tpm'
 
 # My Bindings
-bind -n C-h select-pane -L
-bind -n C-i select-pane -R
+bind -n C-h last-pane
 bind -n C-n select-pane -t +1
 bind -n C-y select-window -t +1
 bind -n C-u select-window -t -1
-
-# My Unbindings
-unbind -n Tab # This works only if placed after binds, dunno why
